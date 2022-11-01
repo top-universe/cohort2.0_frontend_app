@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from '../views/Home.vue'
-import Signup from '../views/auth/signup.vue'
-import Signin from '../views/auth/signin.vue'
+import Index from '../pages/Home.vue'
+import Signup from '../pages/auth/signup.vue'
+import Signin from '../pages/auth/signin.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: Index },
-  { path: '/signup', name: 'Sign up', component: Signup },
-  { path: '/signin', name: 'Sign in', component: Signin }
+    { path: '/signup', name: 'Sign up', component: Signup },
+    { path: '/signin', name: 'Sign in', component: Signin }
   
     // {
     //   path: '/about',

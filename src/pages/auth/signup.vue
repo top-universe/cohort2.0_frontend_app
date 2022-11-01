@@ -1,5 +1,15 @@
 <template>
   <main>
+    
+    <!-- sign up successful component -->
+    <modal v-show="signupSuccessful"> 
+                <div class="signup-success">
+                    <img class="created-check-image" src="@/assets/icons/CheckCircle.svg" alt="check">
+                    <div class="created-header-text">Account Creation Successful</div>
+                    <button class="primary-button">Continue</button>
+                </div>
+    </modal>
+
     <div class="bg-img">
       <h3>MedBookly</h3>
     </div>
@@ -7,9 +17,9 @@
       <div class="med-title">
         <h1>MedBookly</h1>
       </div>
-      <form @submit.prevent="signin">
+      <form @submit.prevent="signup">
         <div class="heading">
-          <h2>Sign In</h2>
+          <h2>Sign Up</h2>
           <p>Let's get to know you</p>
         </div>
         <div>
@@ -28,7 +38,7 @@
           <!-- Download eyeopen -->
         </div>
         <div>
-          <input type="submit" value="Log in">
+          <input type="submit" value="Create Account">
         </div>
         <div class="signup-with">
           <p>or sign up with</p>
@@ -39,9 +49,9 @@
         </div>
         <div class="footer">
           <p>
-            Do not have an account ?
-          <router-link to="signup">Sign Up</router-link>
-        </p>
+            Already have an account?
+          <router-link to="signin">Sign In</router-link>
+          </p>
         </div>
       </form>
     </div>
@@ -49,19 +59,35 @@
 </template>
 
 <script>
+import {Request} from '../../../function/request.js'
+import modal from '@/components/modal.vue'
 export default {
   data() {
     return {
+      signupSuccessful: false,
+      forgotPassword: true,
       user: {
         email: null,
         password: null
       }
     }
   },
+  components: {
+    modal
+  },
   methods: {
-    signin() {
-      let user = this.user.email
-      alert(`signup clicked ${user}`)
+    async signup() {
+      await Request.call("GET", 'todos/1').then(res => {
+        console.log(res.data)
+      }).catch(err => {
+        console.log()
+      }).finally( {})
+
+      // await Request.call("POST", 'signup', JSON.stringify(user)).then(res => {
+      //   console.log(res.data)
+      // }).catch(err => {
+      //   console.log()
+      // }).finally( {})
     }
   }
 }
@@ -69,6 +95,28 @@ export default {
 
 
 <style scoped>
+
+/* signup successful modal */
+.signup-success {
+  width: 300px;
+}
+
+.signup-success .created-check-image {
+    width: 72px;
+    height: 72px;
+    margin: 62px 0 24px;
+}
+
+.signup-success .created-header-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+/* end signup-success */
+
+
 .bg-img {
   display: none;
 }

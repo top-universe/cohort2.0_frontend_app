@@ -3,6 +3,10 @@ import {config} from '../config'
 
 const BASE = config.BASEURL
 
+/**
+ * Request class [ basically for sending api requests using the axios library]
+ * params 
+ */
 export class Request {
   static async call(action, url, data, headers) {
     const options = {

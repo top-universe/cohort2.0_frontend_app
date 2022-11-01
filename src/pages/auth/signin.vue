@@ -1,5 +1,16 @@
 <template>
   <main>
+    
+    <!-- forgot password component -->
+    <modal v-show="forgotPassword"> 
+                <div class="signup-success">
+                    <img class="created-check-image" src="@/assets/icons/forgotPassword.svg" alt="check">
+                    <div class="created-header-text">Forgot Password</div>
+                    <button class="primary-button">Send Confirmation Email</button>
+                </div>
+    </modal>
+    
+
     <div class="bg-img">
       <h3>MedBookly</h3>
     </div>
@@ -7,9 +18,9 @@
       <div class="med-title">
         <h1>MedBookly</h1>
       </div>
-      <form @submit.prevent="signup">
+      <form @submit.prevent="signin">
         <div class="heading">
-          <h2>Sign Up</h2>
+          <h2>Sign In</h2>
           <p>Let's get to know you</p>
         </div>
         <div>
@@ -28,7 +39,7 @@
           <!-- Download eyeopen -->
         </div>
         <div>
-          <input type="submit" value="Create Account">
+          <input type="submit" value="Log in">
         </div>
         <div class="signup-with">
           <p>or sign up with</p>
@@ -39,9 +50,9 @@
         </div>
         <div class="footer">
           <p>
-            Already have an account?
-          <router-link to="signin">Sign In</router-link>
-          </p>
+            Do not have an account ?
+          <router-link to="signup">Sign Up</router-link>
+        </p>
         </div>
       </form>
     </div>
@@ -49,7 +60,6 @@
 </template>
 
 <script>
-import {Request} from '../../../function/request.js'
 export default {
   data() {
     return {
@@ -60,18 +70,9 @@ export default {
     }
   },
   methods: {
-    async signup() {
-      await Request.call("GET", 'todos/1').then(res => {
-        console.log(res.data)
-      }).catch(err => {
-        console.log()
-      }).finally( {})
-
-      // await Request.call("POST", 'signup', JSON.stringify(user)).then(res => {
-      //   console.log(res.data)
-      // }).catch(err => {
-      //   console.log()
-      // }).finally( {})
+    signin() {
+      let user = this.user.email
+      alert(`signup clicked ${user}`)
     }
   }
 }

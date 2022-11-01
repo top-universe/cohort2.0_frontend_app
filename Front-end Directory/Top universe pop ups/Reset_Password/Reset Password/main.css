@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 70px 0px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: #F5F8FF;
+  }
+
+  .main {
+    padding: 30px;
+  }
+  .logo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo h1 {
+    color: #1890ff;
+    display: none;
+    margin-top: -100px;
+  }
+  #mobileCancel {
+    width: 18px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 18px;
+    height: 18px;
+    font-weight: bolder;
+  }
+  .form {
+    background-color: #fff;
+    height: 368px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
+    border-radius: 10px;
+    padding: 40px 18px;
+    margin: auto;
+  }
+  #desktopCancel {
+    display: none;
+  }
+  
+  .mobileFgt {
+    font-weight: 400;
+    font-size: 14px;
+    color: #1f1f1f;
+  }
+  .desktopFgt {
+    display: none;
+  }
+  .padlock {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+    text-align: center;
+    width: 340px;
+  }
+  .padlock p {
+    width: 155px;
+    height: 19px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+  }
+ .mail{
+    width: 264px;
+    height: 64px;
+    margin-top: 16px;
+ }
+ .mail p{
+    font-size: 12px;
+    line-height: 22px;
+ }
+ .seconds{
+    width: 264px;
+    height: 21px;
+    margin-top: 30px;
+ }
+ .seconds p{
+    color: #E85454;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 30px;
+ }
+ .link{
+    margin-top: 40px;
+ }
+ .link a{
+    text-decoration: none;
+    color: #2344EF;
+    font-size: 12px;
+ }
+  
+  /* Media Queries for Desktop Screen*/
+  @media (min-width: 961px) {
+    main {
+      display: flex;
+      background: rgba(0, 0, 0, 0.7);
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      margin: auto;
+    }
+    .main {
+      padding: 70px 50px;
+      width: 500px;
+      height: 457px;
+      margin-top: 100px;
+    }
+   
+    .logo {
+      display: block;
+      width: 202px;
+      height: 61px;
+      margin: auto;
+    }
+    .logo h1 {
+      display: block;
+      color: #246bfd;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .container {
+      width: 500px;
+      height: 457px;
+      display: flex;
+      text-align: center;
+      position: relative;
+      background: #f5f8ff;
+      border-radius: 10px;
+    }
+    .form {
+      width: 367.19px;
+      height: 236px;
+      top: 31px;
+      padding: 30px;
+    }
+    .desktopFgt {
+      display: block;
+      font-weight: 900;
+      font-size: 14px;
+      margin-top: 30px;
+      line-height: 17px;
+      color: #000;
+    }
+    #desktopCancel {
+      display: block;
+      width: 18px;
+      position: absolute;
+      font-size: 18px;
+      height: 18px;
+      right: 24px;
+      top: 24px;
+      font-weight: 900;
+    }
+    .mail{
+        margin-top: 11px;
+        width: 280px;
+        margin-left: 17px;
+    }
+    .seconds{
+        margin-top: 35px;
+        width: 280px;
+        margin-left: 21px;
+    }
+    .link{
+        margin-top: 8px;
+        width: 280px;
+        margin-left: 21px;
+    }
+    #mobileCancel {
+      display: none;
+    }
+    .mobileFgt {
+      display: none;
+    }
+    .padlock {
+        width: 280px;
+      margin: auto;
+      margin-left: 28px;
+    }
+    .padlock p {
+      text-align: left;
+    }
+  }
+  

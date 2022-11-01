@@ -1,0 +1,25 @@
+@import url('./variables.css');
+@import url('./form.css');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #1f1f1f;
+}
+
+/* Main container */
+
+main {
+    height: 100vh;
+}

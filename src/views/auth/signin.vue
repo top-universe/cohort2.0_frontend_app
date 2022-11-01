@@ -28,7 +28,7 @@
           <!-- Download eyeopen -->
         </div>
         <div>
-          <input type="submit" value="Create Account">
+          <input type="submit" value="Log in">
         </div>
         <div class="signup-with">
           <p>or sign up with</p>

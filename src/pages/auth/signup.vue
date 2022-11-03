@@ -1,13 +1,34 @@
 <template>
   <main>
-    
     <!-- sign up successful component -->
-    <modal v-show="signupSuccessful"> 
-                <div class="signup-success">
-                    <img class="created-check-image" src="@/assets/icons/CheckCircle.svg" alt="check">
-                    <div class="created-header-text">Account Creation Successful</div>
-                    <button class="primary-button">Continue</button>
-                </div>
+    <modal v-show="signupSuccessful">
+      <div class="modal-popup">
+        <img
+          class="created-check-image"
+          src="@/assets/icons/CheckCircle.svg"
+          alt="check"
+        />
+        <div class="created-header-text">Account Creation Successful</div>
+        <button class="primary-button">Continue</button>
+      </div>
+    </modal>
+
+    <!-- verify your email -->
+    <modal v-show="verifyEmail">
+      <div class="modal-popup">
+        <img
+          class="created-check-image"
+          src="@/assets/icons/CheckCircle.svg"
+          alt="check"
+        />
+        <div class="created-header-text">
+          You will need to verify your email address to complete registration.
+          An email has been sent to <a>admin@medibookly.com</a> with a link to
+          verify your account. If you have not received the email after a few
+          minutes, please check your spam folder
+        </div>
+        <button class="primary-button">Resend Email</button>
+      </div>
     </modal>
 
     <div class="bg-img">
@@ -24,33 +45,45 @@
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Email" required v-model="user.email">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+            v-model="user.email"
+          />
         </div>
         <div class="password">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Password" required v-model="user.password">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+            v-model="user.password"
+          />
           <div class="icons">
             <!-- <i class="fas-light fa-home"></i>
             <i class="fa-light fa-eye-slash"></i> -->
-            <img src="@/assets/icons/eye-slash.svg" alt="Icon">
+            <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
           </div>
           <!-- <img src="./assets/icons/icon_eyeclose.svg" alt=""> -->
           <!-- Download eyeopen -->
         </div>
         <div>
-          <input type="submit" value="Create Account">
+          <input type="submit" value="Create Account" />
         </div>
         <div class="signup-with">
           <p>or sign up with</p>
         </div>
         <div class="option-signup">
-          <a href="#"><img src="@/assets/icons/icon_google.svg" alt=""></a>
-          <a href="#"><img src="@/assets/icons/icon_facebook.svg" alt=""></a>
+          <a href="#"><img src="@/assets/icons/icon_google.svg" alt="" /></a>
+          <a href="#"><img src="@/assets/icons/icon_facebook.svg" alt="" /></a>
         </div>
         <div class="footer">
           <p>
             Already have an account?
-          <router-link to="signin">Sign In</router-link>
+            <router-link to="signin">Sign In</router-link>
           </p>
         </div>
       </form>
@@ -59,63 +92,67 @@
 </template>
 
 <script>
-import {Request} from '../../../function/request.js'
-import modal from '@/components/modal.vue'
+import { Request } from "../../../function/request.js";
+import modal from "@/components/modal.vue";
 export default {
   data() {
     return {
       signupSuccessful: false,
-      forgotPassword: true,
+      forgotPassword: false,
+      verifyEmail: true,
       user: {
         email: null,
-        password: null
-      }
-    }
+        password: null,
+      },
+    };
   },
   components: {
-    modal
+    modal,
   },
   methods: {
     async signup() {
-      await Request.call("GET", 'todos/1').then(res => {
-        console.log(res.data)
-      }).catch(err => {
-        console.log()
-      }).finally( {})
+      await Request.call("GET", "todos/1")
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log();
+        })
+        .finally({});
 
       // await Request.call("POST", 'signup', JSON.stringify(user)).then(res => {
       //   console.log(res.data)
       // }).catch(err => {
       //   console.log()
       // }).finally( {})
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
-
 <style scoped>
-
-/* signup successful modal */
-.signup-success {
+/* modal popup class */
+.modal-popup {
   width: 300px;
 }
 
-.signup-success .created-check-image {
-    width: 72px;
-    height: 72px;
-    margin: 62px 0 24px;
+.modal-popup .created-check-image {
+  width: 72px;
+  height: 72px;
+  margin: 62px 0 24px;
 }
 
-.signup-success .created-header-text {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 24px;
+.modal-popup .created-header-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
 }
 
-/* end signup-success */
-
+.modal-popup .created-header-text a {
+  color: var(--color-primary);
+}
+/* end modal-popup (modal)*/
 
 .bg-img {
   display: none;
@@ -167,7 +204,6 @@ div > label {
   line-height: 22px;
 }
 
-
 .signup-with {
   text-align: center;
   font-size: var(--fontsize);
@@ -175,7 +211,8 @@ div > label {
   margin: 60px 0 40px;
 }
 
-.signup-with::before, .signup-with::after {
+.signup-with::before,
+.signup-with::after {
   content: "";
   display: block;
   position: absolute;
@@ -224,9 +261,7 @@ div > label {
   color: var(--color-primary);
 }
 
-
 /* Mobile view */
-
 
 .form-wrapper {
   padding: 0 50px;
@@ -235,13 +270,15 @@ form {
   width: 350px;
 }
 
-input[type=email], input[type=password], input[type=submit] {
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
   height: 40px;
 }
 
 /* Tablet view */
 
-@media (max-width: 900px) and (min-width:521px) {
+@media (max-width: 900px) and (min-width: 521px) {
   .med-title h1 {
     display: block;
   }
@@ -266,11 +303,11 @@ input[type=email], input[type=password], input[type=submit] {
     font-size: var(--fontsize);
     line-height: 20px;
   }
-  .signup-with::before, .signup-with::after {
+  .signup-with::before,
+  .signup-with::after {
     width: 35%;
   }
 }
-
 
 /* Desktop view */
 
@@ -298,7 +335,6 @@ input[type=email], input[type=password], input[type=submit] {
     position: relative;
   }
 
-
   .bg-img h3 {
     font-weight: 700;
     font-size: 20px;
@@ -325,6 +361,5 @@ input[type=email], input[type=password], input[type=submit] {
   .med-title h1 {
     display: none;
   }
-
 }
 </style>

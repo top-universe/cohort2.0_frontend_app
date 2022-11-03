@@ -17,19 +17,42 @@
     <modal v-show="verifyEmail">
       <div class="modal-popup">
         <img
+          class="verify-mail-image"
+          style="margin-top: 40px"
+          src="@/assets/icons/Mail.svg"
+          alt="check"
+        />
+
+        <div class="created-header-text">A mail has been sent to you.</div>
+        <div class="verify-sub-text">
+          Check the email account you submitted for your verification link.
+        </div>
+        <button class="primary-button" style="margin-bottom: 16px">
+          Go to Email
+        </button>
+        <button class="primary-button white-btn">Resend link</button>
+      </div>
+    </modal>
+
+    <!-- verify email successful -->
+    <modal v-show="verifyEmailSuccessful">
+      <div class="modal-popup">
+        <img
           class="created-check-image"
+          style="margin-top: 40px"
           src="@/assets/icons/CheckCircle.svg"
           alt="check"
         />
-        <div class="created-header-text">
-          You will need to verify your email address to complete registration.
-          An email has been sent to <a>admin@medibookly.com</a> with a link to
-          verify your account. If you have not received the email after a few
-          minutes, please check your spam folder
+
+        <div class="created-header-text">Email Verified!</div>
+        <div class="verify-sub-text">
+          You have successfully verified your account
         </div>
-        <button class="primary-button">Resend Email</button>
+        <button class="primary-button">Ok</button>
       </div>
     </modal>
+    <!-- sign out component -->
+    <signOut />
 
     <div class="bg-img">
       <h3>MedBookly</h3>
@@ -94,12 +117,14 @@
 <script>
 import { Request } from "../../../function/request.js";
 import modal from "@/components/modal.vue";
+import signOut from "@/components/signOut.vue";
 export default {
   data() {
     return {
       signupSuccessful: false,
       forgotPassword: false,
-      verifyEmail: true,
+      verifyEmail: false,
+      verifyEmailSuccessful: false,
       user: {
         email: null,
         password: null,
@@ -108,6 +133,7 @@ export default {
   },
   components: {
     modal,
+    signOut,
   },
   methods: {
     async signup() {
@@ -139,7 +165,7 @@ export default {
 .modal-popup .created-check-image {
   width: 72px;
   height: 72px;
-  margin: 62px 0 24px;
+  margin: 62px 0 26px;
 }
 
 .modal-popup .created-header-text {
@@ -196,6 +222,14 @@ export default {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+
+.verify-sub-text {
+  color: #8c8c8c;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
 }
 
 div > label {
@@ -282,6 +316,7 @@ input[type="submit"] {
   .med-title h1 {
     display: block;
   }
+
   .form-wrapper {
     /* width: 100%; */
     /* width: 900px; */

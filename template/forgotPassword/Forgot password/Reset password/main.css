@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 360px;
+    height: 100vh ;
+    padding: 70px 0px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    /* background-color: #F5F8FF; */
+}
+.cancel{
+    height: 30px;
+    display: flex;
+    float: right;
+}
+.main{
+    padding: 30px;
+}
+.logo{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo h1{
+    font-family: 'Lato', sans-serif;
+    color: #1890FF;
+    margin-top: -100px;
+    ;
+}
+#mobileCancel{
+    width: 18px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 18px;
+    height: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+#desktopCancel
+{
+    display: none;
+}
+
+
+.form{
+    background-color: #fff;
+    height: 479px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
+    border-radius: 10px;
+    padding: 40px 18px;
+    margin: auto;
+}
+.form p{
+font-family: 'Lato';
+font-weight: bolder;
+font-size: 14px;
+color: #1F1F1F;
+}
+.padlock{
+    display: flex;
+    margin-top: 30px;
+    gap: 9px;
+    width: 340px;
+    height: 32px;
+}
+.padlock p{
+    width: 266px;
+    height: 32px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8C8C8C;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.label{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 20px;
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+.label-cp{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 28px;
+    font-family: 'Lato';
+    font-weight: bold;
+}
+
+input:focus
+{
+   outline: none;
+   box-shadow: 0 0 0 1px #1F5BD7;
+}
+
+
+input:focus
+{
+   outline: none;
+   box-shadow: 0 0 0 1px #E32F2F;
+}
+
+
+ .password{
+    width: 260px;
+    height: 44px;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-family: 'Lato';
+}
+#btn{
+    align-items: center;
+    padding: 6.4px 15px;
+    margin-top: 24px;
+    width: 260px;
+    font-family: 'Lato';
+    height: 40px;
+    color: #FFFFFF;
+    background: #1F5BD7;
+    border: 1px solid #246BFD;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#btn:hover
+{
+    background-color:  #246BFD;
+}
+
+.password::placeholder{
+    color: black;
+    font-size: 14px;
+}
+
+.invalid-message p
+{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: #E32F2F;
+}
+
+/* Media Queries for Desktop Screen*/
+@media (min-width: 961px) {
+    main {
+      display: flex;
+      background: #262626;
+      opacity: 0.7;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      margin: auto;
+    }
+    .main {
+      padding: 70px 50px;
+      width: 500px;
+      height: 488px;
+      margin-top: 80px;
+    }
+    
+    .logo {
+      display: block;
+      width: 220px;
+      height: 61px;
+      margin: auto;
+    }
+    .logo h1 {
+      display: block;
+      color: #0357fd;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .container {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      text-align: center;
+      position: relative;
+      background: #f5f8ff;
+      border-radius: 10px;
+    }
+    .form {
+      width: 348px;
+      height: 348px;
+      top: 31px;
+  
+      padding: 30px;
+    }
+
+    .form .mobilePara{
+        display: none;
+    }
+    .desktopFgt {
+      display: block;
+      font-weight: 900;
+      font-size: 14px;
+      margin-top: 30px;
+      line-height: 17px;
+      color: #000;
+    }
+    #desktopCancel {
+      display: block;
+      width: 18px;
+      position: absolute;
+      font-size: 18px;
+      height: 18px;
+      right: 24px;
+      top: 24px;
+      font-weight: 900;
+    }
+    #mobileCancel  {
+      display: none;
+    }
+    .logo p {
+      display: block;
+      width: 153px;
+     height: 17px;
+     margin: 20px auto;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 17px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    color:rgb(0, 0, 0);
+
+    }
+    .padlock {
+      margin: auto;
+    }
+    .padlock p {
+
+      margin-left: 10px;
+      text-align: center;
+    }
+    form {
+      margin: auto;
+      margin-top: 30px;
+      width: 298px;
+    }
+    .password {
+        width: 296px;
+        height: 32px;
+    }
+    .email:focus {
+      border: 2px solid white;
+    }
+    #btn {
+        width: 298px;
+        height: 30px;
+      cursor: pointer;
+    }
+  }
+  

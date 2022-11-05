@@ -1,0 +1,15 @@
+/* Color Palette */
+:root {
+    --color-primary: #246bfd;
+    --color-secondary: #fff;
+    --color-border: #1890ff;
+    --color-form-bg: #F5F8FF;
+    --color-input: #d9d9d9;
+    --color-placeholder: #bfbfbf;
+    --color-button-active: #4B86FD;
+    --color-button-hover:  #1F5BD7;
+    --logo-fontsize: 2rem;
+    --fontsize: 14px;
+}
+
+/* CSS reset */

@@ -71,9 +71,10 @@
           <input
             type="email"
             id="email"
+            @input="validEmail"
             placeholder="Email"
             required
-            v-model="user.email"
+            v-model="userEmail"
           />
         </div>
         <div class="password">
@@ -125,6 +126,8 @@ export default {
       forgotPassword: false,
       verifyEmail: false,
       verifyEmailSuccessful: false,
+      userEmail: "",
+      emailRegex: "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/",
       user: {
         email: null,
         password: null,
@@ -151,6 +154,10 @@ export default {
       // }).catch(err => {
       //   console.log()
       // }).finally( {})
+    },
+
+    validEmail() {
+      emailRegex.test(this.userEmail);
     },
   },
 };

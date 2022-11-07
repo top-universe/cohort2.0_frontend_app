@@ -1,15 +1,17 @@
 <template>
   <main>
-    
     <!-- forgot password component -->
-    <modal v-show="forgotPassword"> 
-                <div class="signup-success">
-                    <img class="created-check-image" src="@/assets/icons/forgotPassword.svg" alt="check">
-                    <div class="created-header-text">Forgot Password</div>
-                    <button class="primary-button">Send Confirmation Email</button>
-                </div>
+    <modal v-show="forgotPassword">
+      <div class="modal-popup">
+        <img
+          class="created-check-image"
+          src="@/assets/icons/forgotPassword.svg"
+          alt="check"
+        />
+        <div class="created-header-text">Forgot Password</div>
+        <button class="primary-button">Send Confirmation Email</button>
+      </div>
     </modal>
-    
 
     <div class="bg-img">
       <h3>MedBookly</h3>
@@ -25,34 +27,69 @@
         </div>
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Email" required v-model="user.email">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            required
+            v-model="user.email"
+          />
         </div>
+
         <div class="password">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Password" required v-model="user.password">
+          <input
+            :type="passwordInput"
+            id="password"
+            placeholder="Password"
+            required
+            v-model="user.password"
+          />
           <div class="icons">
             <!-- <i class="fas-light fa-home"></i>
             <i class="fa-light fa-eye-slash"></i> -->
-            <img src="@/assets/icons/eye-slash.svg" alt="Icon">
+            <div :class="classCloseIcon" @click="showPassword">
+              <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
+            </div>
+
+            <div :class="classOpenIcon" @click="hidePassword">
+              <img
+                src="@/assets/icons/eye.svg"
+                alt="Icon"
+                @click="hidePassword"
+              />
+            </div>
           </div>
           <!-- <img src="./assets/icons/icon_eyeclose.svg" alt=""> -->
           <!-- Download eyeopen -->
         </div>
-        <div>
-          <input type="submit" value="Log in">
+
+        <div class="remember-check">
+          <label for="email">Remember me?</label>
+          <input type="checkbox" id="email" v-model="user.remember" />
         </div>
+
+        <div>
+          <input type="submit" value="Log in" />
+        </div>
+
+        <div class="forget-password">
+          <a @click="toggleForgetPassword">Forget Password?</a>
+        </div>
+
         <div class="signup-with">
           <p>or sign up with</p>
         </div>
+
         <div class="option-signup">
-          <a href="#"><img src="@/assets/icons/icon_google.svg" alt=""></a>
-          <a href="#"><img src="@/assets/icons/icon_facebook.svg" alt=""></a>
+          <a href="#"><img src="@/assets/icons/icon_google.svg" alt="" /></a>
+          <a href="#"><img src="@/assets/icons/icon_facebook.svg" alt="" /></a>
         </div>
         <div class="footer">
           <p>
             Do not have an account ?
-          <router-link to="signup">Sign Up</router-link>
-        </p>
+            <router-link to="signup">Sign Up</router-link>
+          </p>
         </div>
       </form>
     </div>
@@ -60,26 +97,85 @@
 </template>
 
 <script>
+import { Request } from "../../../function/request.js";
+import modal from "@/components/modal.vue";
+
 export default {
   data() {
     return {
+      forgotPassword: false,
+      classCloseIcon: "icon-show",
+      classOpenIcon: "icon-hide",
+      passwordInput: "password",
       user: {
         email: null,
-        password: null
-      }
-    }
+        password: null,
+      },
+    };
+  },
+  components: {
+    modal,
   },
   methods: {
     signin() {
-      let user = this.user.email
-      alert(`signup clicked ${user}`)
-    }
-  }
-}
+      let user = this.user.email;
+      alert(`signup clicked ${user}`);
+    },
+
+    toggleForgetPassword() {
+      this.forgotPassword = true;
+    },
+
+    showPassword() {
+      if ((this.passwordInput = "password")) {
+        this.passwordInput = "text";
+        this.classCloseIcon = "icon-hide";
+        this.classOpenIcon = "icon-show";
+      }
+    },
+
+    hidePassword() {
+      if ((this.passwordInput = "text")) {
+        this.passwordInput = "password";
+        this.classCloseIcon = "icon-show";
+        this.classOpenIcon = "icon-hide";
+      }
+    },
+  },
+};
 </script>
 
-
 <style scoped>
+/* modal popup class */
+.modal-popup {
+  width: 300px;
+}
+
+.modal-popup .created-check-image {
+  width: 72px;
+  height: 72px;
+  margin: 62px 0 24px;
+}
+
+.modal-popup .created-header-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.modal-popup .created-header-text a,
+.forget-password {
+  color: var(--color-primary);
+}
+/* end modal-popup (modal)*/
+
+.forget-password {
+  text-align: right;
+  font-size: var(--fontsize);
+  cursor: pointer;
+}
+
 .bg-img {
   display: none;
 }
@@ -130,7 +226,6 @@ div > label {
   line-height: 22px;
 }
 
-
 .signup-with {
   text-align: center;
   font-size: var(--fontsize);
@@ -138,7 +233,8 @@ div > label {
   margin: 60px 0 40px;
 }
 
-.signup-with::before, .signup-with::after {
+.signup-with::before,
+.signup-with::after {
   content: "";
   display: block;
   position: absolute;
@@ -187,9 +283,7 @@ div > label {
   color: var(--color-primary);
 }
 
-
 /* Mobile view */
-
 
 .form-wrapper {
   padding: 0 50px;
@@ -198,13 +292,35 @@ form {
   width: 350px;
 }
 
-input[type=email], input[type=password], input[type=submit] {
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
   height: 40px;
+}
+
+input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+}
+
+.remember-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon-show {
+  display: block;
+}
+
+.icon-hide {
+  display: none;
 }
 
 /* Tablet view */
 
-@media (max-width: 900px) and (min-width:521px) {
+@media (max-width: 900px) and (min-width: 521px) {
   .med-title h1 {
     display: block;
   }
@@ -229,11 +345,11 @@ input[type=email], input[type=password], input[type=submit] {
     font-size: var(--fontsize);
     line-height: 20px;
   }
-  .signup-with::before, .signup-with::after {
+  .signup-with::before,
+  .signup-with::after {
     width: 35%;
   }
 }
-
 
 /* Desktop view */
 
@@ -261,7 +377,6 @@ input[type=email], input[type=password], input[type=submit] {
     position: relative;
   }
 
-
   .bg-img h3 {
     font-weight: 700;
     font-size: 20px;
@@ -288,6 +403,5 @@ input[type=email], input[type=password], input[type=submit] {
   .med-title h1 {
     display: none;
   }
-
 }
 </style>

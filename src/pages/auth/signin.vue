@@ -39,7 +39,7 @@
         <div class="password">
           <label for="password">Password</label>
           <input
-            type="password"
+            :type="passwordInput"
             id="password"
             placeholder="Password"
             required
@@ -48,7 +48,17 @@
           <div class="icons">
             <!-- <i class="fas-light fa-home"></i>
             <i class="fa-light fa-eye-slash"></i> -->
-            <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
+            <div :class="classCloseIcon" @click="showPassword">
+              <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
+            </div>
+
+            <div :class="classOpenIcon" @click="hidePassword">
+              <img
+                src="@/assets/icons/eye.svg"
+                alt="Icon"
+                @click="hidePassword"
+              />
+            </div>
           </div>
           <!-- <img src="./assets/icons/icon_eyeclose.svg" alt=""> -->
           <!-- Download eyeopen -->
@@ -94,6 +104,9 @@ export default {
   data() {
     return {
       forgotPassword: false,
+      classCloseIcon: "icon-show",
+      classOpenIcon: "icon-hide",
+      passwordInput: "password",
       user: {
         email: null,
         password: null,
@@ -111,6 +124,22 @@ export default {
 
     toggleForgetPassword() {
       this.forgotPassword = true;
+    },
+
+    showPassword() {
+      if ((this.passwordInput = "password")) {
+        this.passwordInput = "text";
+        this.classCloseIcon = "icon-hide";
+        this.classOpenIcon = "icon-show";
+      }
+    },
+
+    hidePassword() {
+      if ((this.passwordInput = "text")) {
+        this.passwordInput = "password";
+        this.classCloseIcon = "icon-show";
+        this.classOpenIcon = "icon-hide";
+      }
     },
   },
 };
@@ -264,6 +293,7 @@ form {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"],
 input[type="submit"] {
   height: 40px;
@@ -278,6 +308,14 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.icon-show {
+  display: block;
+}
+
+.icon-hide {
+  display: none;
 }
 
 /* Tablet view */

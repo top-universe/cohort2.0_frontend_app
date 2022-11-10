@@ -51,8 +51,6 @@
         <button class="primary-button">Ok</button>
       </div>
     </modal>
-    <!-- sign out component -->
-    <signOut />
 
     <div class="bg-img">
       <h3>MedBookly</h3>
@@ -74,7 +72,7 @@
             @input="validEmail"
             placeholder="Email"
             required
-            v-model="userEmail"
+            v-model="user.email"
           />
         </div>
         <div class="password">
@@ -118,7 +116,6 @@
 <script>
 import { Request } from "../../../function/request.js";
 import modal from "@/components/modal.vue";
-import signOut from "@/components/signOut.vue";
 export default {
   data() {
     return {
@@ -136,7 +133,6 @@ export default {
   },
   components: {
     modal,
-    signOut,
   },
   methods: {
     async signup() {

@@ -1,26 +1,29 @@
-@import url('./variables.css');
-@import url('./form.css');
-@import url('./button.css');
-
+@import url("./variables.css");
+@import url("./form.css");
+@import url("./button.css");
+@import url("./input.css");
+@import url("./nav-bar.css");
+@import url("./main.css");
+@import url("./buttons.css");
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 /* Typography */
 body {
-    font-family: 'Lato', sans-serif;
-    color: #1f1f1f;
+  font-family: "Lato", sans-serif;
+  color: #1f1f1f;
 }
 
 /* Main container */
 
 main {
-    height: 100vh;
+  height: 100vh;
 }

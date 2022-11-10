@@ -1,7 +1,7 @@
 import axios from "axios"
 import {config} from '../config'
 
-const BASE = config.BASEURL
+const BASE = config.APIBASEURL
 
 /**
  * Request class [ basically for sending api requests using the axios library]
@@ -24,11 +24,3 @@ export class Request {
     }
   }
 }
-
-// async function example() {
-//   await Request.call("GET", 'todos/1').then(res => {
-//     console.log(res.data)
-//   }).catch(err => {
-//     console.log()
-//   }).finally( {})
-// }

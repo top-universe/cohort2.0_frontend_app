@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "../pages/Home.vue";
 import Signup from "../pages/auth/signup.vue";
 import Signin from "../pages/auth/signin.vue";
-import personalProfile from "../pages/personalProfile.vue";
+import personalProfile from "../pages/profile/personalProfile.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

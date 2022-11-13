@@ -435,4 +435,13 @@ stateArr[251] =
 stateArr[252] =
   "Bulawayo|Harare|ManicalandMashonaland Central|Mashonaland East|Mashonaland West|Masvingo|Matabeleland North|Matabeleland South|Midlands";
 
-export default stateArr;
+let states = [];
+const stateId = 0;
+
+for (let i = stateId; i < stateArr.length; i++) {
+  states.push({
+    id: [i],
+    name: stateArr[i],
+  });
+}
+export default states;

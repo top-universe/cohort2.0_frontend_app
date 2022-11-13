@@ -79,13 +79,16 @@
               <label class="form-label" for="country"
                 >Country <span>*</span></label
               >
-              <select class="form-input" name="country" v-model="user.country">
+              <select
+                class="form-input"
+                name="country"
+                @change="onChange($event)"
+                v-model="user.country"
+              >
                 <option
-                  v-for="list in country"
-                  :listr="list.id"
-                  :key="list.id"
-                  value="{{list.name}}"
-                  @click="loca(list.id)"
+                  v-for="(list, index) in country"
+                  :key="index"
+                  :value="list.name"
                 >
                   {{ list.name }}
                 </option>
@@ -99,7 +102,14 @@
                 id="state"
                 v-model="user.state"
               >
-                <option value="">Select State</option>
+                <option selected value="">Select a State</option>
+                <option
+                  v-for="(state, index) in populatedState"
+                  :key="index"
+                  :value="state.name"
+                >
+                  {{ state }}
+                </option>
               </select>
             </div>
             <div class="form-group">
@@ -125,14 +135,14 @@
 
 <script>
 import headers from "@/components/headers.vue";
-import country from "@/assets/country.js";
-import stateArr from "@/assets/stateArr.js";
+import country from "@/../data/country.js";
+import states from "@/../data/stateArr.js";
 
 export default {
   data() {
     return {
       country: country,
-      stateArr: stateArr,
+      states: states,
       user: {
         country: "",
         state: "",
@@ -143,22 +153,22 @@ export default {
     headers,
   },
   methods: {
-    printState(state_index) {
-      console.log(stateArr[state_index]);
-      //   var optionStr = document.getElementById(state_id);
-      //   optionStr.length = 0;
-      //   optionStr.options[0] = new Option("Select State", "");
-      //   optionStr.selectedIndex = 0;
-      //   let stateAr = stateArr[state_index].split("|");
-      //   for (let i = 0; i < stateAr.length; i++) {
-      //     optionStr.options[optionStr.length] = new Option(
-      //       stateAr[i],
-      //       stateAr[i]
-      //     );
-      //   }
-    },
-    loca(sets) {
-      console.log(sets);
+    onChange(event) {
+      // let country = this.country.filter(
+      //   (element) => element.name == event.target.value
+      // );
+      let countryIndex = 0;
+      for (let i = 0; i < this.country.length; i++) {
+        if (this.country[i].name === event.target.value) {
+          countryIndex = i + 1;
+          // console.log(i);
+        }
+      }
+      this.populatedState = this.states[countryIndex].name.split("|");
+      // console.log(this.states[countryIndex].name.split("|"));
+      // console.log(countryIndex);
+
+      // let country = this.country.indexOf(event.target.value);
     },
   },
 };

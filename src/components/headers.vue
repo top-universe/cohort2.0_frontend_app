@@ -162,6 +162,7 @@ input {
 
   .nav-item a {
     color: var(--color-nav-item);
+    font-size: 16px;
   }
 
   .profile-end {

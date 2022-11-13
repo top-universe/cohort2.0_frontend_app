@@ -1,11 +1,11 @@
-import axios from "axios"
-import {config} from '../config'
+import axios from "axios";
+import { config } from "../config";
 
-const BASE = config.BASEURL
+const BASE = config.APIBASEURL;
 
 /**
  * Request class [ basically for sending api requests using the axios library]
- * params 
+ * params
  */
 export class Request {
   static async call(action, url, data, headers) {
@@ -13,22 +13,14 @@ export class Request {
       method: action,
       url: `${BASE}/${url}`,
       header: headers,
-      data: data
+      data: data,
     };
 
     try {
-      console.log('3ad')
-      return await axios.request(options)
+      console.log("3ad");
+      return await axios.request(options);
     } catch (err) {
-      throw err
+      throw err;
     }
   }
 }
-
-// async function example() {
-//   await Request.call("GET", 'todos/1').then(res => {
-//     console.log(res.data)
-//   }).catch(err => {
-//     console.log()
-//   }).finally( {})
-// }

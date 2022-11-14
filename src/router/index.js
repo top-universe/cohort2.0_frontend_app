@@ -15,6 +15,11 @@ const router = createRouter({
       name: "Personal Profile",
       component: personalProfile,
     },
+    {
+      path: "/facultyprofile",
+      name: "Faculty Profile",
+      component: FacultyProfile,
+    },
 
     // {
     //   path: '/about',

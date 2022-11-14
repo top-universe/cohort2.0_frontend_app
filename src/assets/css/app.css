@@ -1,10 +1,7 @@
 @import url("./variables.css");
+@import url("./input.css");
 @import url("./form.css");
 @import url("./button.css");
-@import url("./input.css");
-@import url("./nav-bar.css");
-@import url("./main.css");
-@import url("./buttons.css");
 
 * {
   margin: 0px;

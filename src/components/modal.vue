@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div v-show="closeModal">
     <div class="background-container">
       <div class="created-container">
         <button
-          @click="closeModal"
+          @click="toggleCloseModal"
           href="#"
           class="created-cancel-image"
         ></button>
@@ -17,9 +17,16 @@
 
 <script>
 export default {
+  name: "modal",
+  data() {
+    return {
+      closeModal: true,
+    };
+  },
   methods: {
-    closeModal() {
-      alert("close modal");
+    toggleCloseModal() {
+      this.closeModal = !this.closeModal;
+      console.log("close modal");
     },
   },
 };

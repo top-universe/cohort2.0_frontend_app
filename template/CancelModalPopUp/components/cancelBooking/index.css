@@ -68,7 +68,7 @@
     cursor: pointer;
   }
   
-  .btn-continue-No {
+  .btn-continue-Yes {
     background: #E32F2F;
     border: 1px solid #E32F2F;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
@@ -81,7 +81,7 @@
     cursor: pointer;
   }
 
-  .btn-continue-No:hover {
+  .btn-continue-Yes:hover {
     background: #e24343;
     border: 1px solid #e24343;
   }
@@ -95,7 +95,7 @@
     border: 1px solid #4b86fd;
     box-shadow: 0px 0px 0px 5px #4b86fd1a;
   }
-  .btn-continue-No:active {
+  .btn-continue-Yes:active {
     background: #fd5a4b;
     border: 1px solid #fd5a4b;
     box-shadow: 0px 0px 0px 5px #4b86fd1a;
@@ -137,7 +137,7 @@
       height: 17px;
       margin-top: 3px;
     }
-    .btn-continue-No{
+    .btn-continue-Yes{
         width: 344px;
         height: 44px;
         margin-top: 20px;

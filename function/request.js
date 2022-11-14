@@ -1,11 +1,15 @@
-import axios from "axios"
-import {config} from '../config'
+import axios from "axios";
+import { config } from "../config";
 
+<<<<<<< HEAD
 const BASE = config.APIBASEURL
+=======
+const BASE = config.APIBASEURL;
+>>>>>>> alawiye
 
 /**
  * Request class [ basically for sending api requests using the axios library]
- * params 
+ * params
  */
 export class Request {
   static async call(action, url, data, headers) {
@@ -13,14 +17,14 @@ export class Request {
       method: action,
       url: `${BASE}/${url}`,
       header: headers,
-      data: data
+      data: data,
     };
 
     try {
-      console.log('3ad')
-      return await axios.request(options)
+      console.log("3ad");
+      return await axios.request(options);
     } catch (err) {
-      throw err
+      throw err;
     }
   }
 }

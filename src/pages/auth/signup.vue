@@ -51,8 +51,6 @@
         <button class="primary-button">Ok</button>
       </div>
     </modal>
-    <!-- sign out component -->
-    <signOut />
 
     <div class="bg-img">
       <h3>MedBookly</h3>
@@ -80,19 +78,25 @@
         <div class="password">
           <label for="password">Password</label>
           <input
-            type="password"
+            :type="passwordInput"
             id="password"
             placeholder="Password"
             required
             v-model="user.password"
           />
           <div class="icons">
-            <!-- <i class="fas-light fa-home"></i>
-            <i class="fa-light fa-eye-slash"></i> -->
-            <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
+            <div :class="classCloseIcon" @click="showPassword">
+              <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
+            </div>
+
+            <div :class="classOpenIcon" @click="hidePassword">
+              <img
+                src="@/assets/icons/eye.svg"
+                alt="Icon"
+                @click="hidePassword"
+              />
+            </div>
           </div>
-          <!-- <img src="./assets/icons/icon_eyeclose.svg" alt=""> -->
-          <!-- Download eyeopen -->
         </div>
         <div>
               <label>Countries</label>
@@ -133,6 +137,7 @@
 <script>
 import { Request } from "../../../function/request.js";
 import modal from "@/components/modal.vue";
+<<<<<<< HEAD
 import signOut from "@/components/signOut.vue";
 const countries = [
 	{
@@ -901,6 +906,8 @@ const countries = [
 	}
 ]
 
+=======
+>>>>>>> alawiye
 export default {
   data() {
     return {
@@ -908,10 +915,13 @@ export default {
       populatedState: [],
       state: '',
       signupSuccessful: false,
+      populatedState: [],
       forgotPassword: false,
       verifyEmail: false,
       verifyEmailSuccessful: false,
-      userEmail: "",
+      classCloseIcon: "icon-show",
+      classOpenIcon: "icon-hide",
+      passwordInput: "password",
       emailRegex: "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/",
       user: {
         email: null,
@@ -921,11 +931,11 @@ export default {
   },
   components: {
     modal,
-    signOut,
   },
   methods: {
     async signup() {
       const data = {
+<<<<<<< HEAD
       "email": this.user.email,
       "password": this.user.password
     }
@@ -934,20 +944,52 @@ export default {
       alert(data.data.success)
     })
 
+=======
+        email: this.user.email,
+        password: this.user.password,
+      };
+      console.log(data);
+      const request = Request.call("POST", "signup", data).then((data) => {
+        alert(data.data.success);
+      });
+>>>>>>> alawiye
       // await Request.call("POST", 'signup', JSON.stringify(user)).then(res => {
       //   console.log(res.data)
       // }).catch(err => {
       //   console.log()
       // }).finally( {})
     },
+<<<<<<< HEAD
     onChange(event) {
       let country = this.countries.filter(
         (element) => element.country == event.target.value
       );
       this.populatedState = country[0].states;
     },
+=======
+
+    // function to valid email
+>>>>>>> alawiye
     validEmail() {
-      emailRegex.test(this.userEmail);
+      return this.user.email.match(this.emailRegex)
+        ? console.log("valid email")
+        : console.log("invalid email, please check and try again");
+    },
+
+    showPassword() {
+      if ((this.passwordInput = "password")) {
+        this.passwordInput = "text";
+        this.classCloseIcon = "icon-hide";
+        this.classOpenIcon = "icon-show";
+      }
+    },
+
+    hidePassword() {
+      if ((this.passwordInput = "text")) {
+        this.passwordInput = "password";
+        this.classCloseIcon = "icon-show";
+        this.classOpenIcon = "icon-hide";
+      }
     },
   },
 };
@@ -963,6 +1005,14 @@ export default {
   width: 72px;
   height: 72px;
   margin: 62px 0 26px;
+}
+
+.icon-show {
+  display: block;
+}
+
+.icon-hide {
+  display: none;
 }
 
 .modal-popup .created-header-text {

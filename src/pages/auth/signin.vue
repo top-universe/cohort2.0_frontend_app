@@ -46,8 +46,6 @@
             v-model="user.password"
           />
           <div class="icons">
-            <!-- <i class="fas-light fa-home"></i>
-            <i class="fa-light fa-eye-slash"></i> -->
             <div :class="classCloseIcon" @click="showPassword">
               <img src="@/assets/icons/eye-slash.svg" alt="Icon" />
             </div>
@@ -60,8 +58,6 @@
               />
             </div>
           </div>
-          <!-- <img src="./assets/icons/icon_eyeclose.svg" alt=""> -->
-          <!-- Download eyeopen -->
         </div>
 
         <div class="remember-check">

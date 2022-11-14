@@ -36,19 +36,24 @@
           />
           <input class="nav-input" type="text" />
         </span>
-        <span class="profile-avatar"
-          ><img src="../assets/icons/profile-avatar.svg" alt="profile_avatar" />
-        </span>
-        <span class="profile-name">Adewale</span>
-        <span class="details collapsible collapsible-true">
-          <span @click="handleToggle" class="collapse-arrow arrow-right"
+        <div class="profile-container" @click="handleToggle">
+          <span class="profile-avatar"
             ><img
-              class=""
-              src="../assets/icons/more-arrow.svg"
-              alt="search_icon"
+              src="../assets/icons/profile-avatar.svg"
+              alt="profile_avatar"
             />
           </span>
-        </span>
+          <span class="profile-name">Adewale</span>
+          <span class="details collapsible collapsible-true">
+            <span class="collapse-arrow arrow-right">
+              <img
+                class=""
+                src="../assets/icons/more-arrow.svg"
+                alt="search_icon"
+              />
+            </span>
+          </span>
+        </div>
         <div v-show="profileDrop" class="profile-drop">
           <a href="#">View Profile</a>
           <a href="#">Logout</a>
@@ -76,6 +81,7 @@ export default {
 
 <style scoped>
 /* For Mobile Devices */
+
 .nav-bar {
   display: none;
 }
@@ -105,6 +111,14 @@ export default {
 @media screen and (min-width: 800px) {
   .nav-small {
     display: none;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .nav-bar {
@@ -243,5 +257,15 @@ export default {
   .collapsible-true .collapsible-content {
     display: block;
   }
+
+  /* .rotate-arrow-enter-active,
+.rotate-arrow-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.rotate-arrow-enter-from,
+.rotate-arrow-leave-to {
+  opacity: 0; */
+  /* } */
 }
 </style>

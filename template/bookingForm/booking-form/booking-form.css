@@ -186,11 +186,6 @@ button.save-changes {
       line-height: 20px;
       margin: 8px 0 36px;
   }
-  .form-input-check {
-      height: 16px;
-      margin-left: 8px;
-      width: 16px;
-  }
   .form-group-inline {
       align-items: center;
       display: flex;

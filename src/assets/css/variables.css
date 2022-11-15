@@ -1,15 +1,21 @@
 /* Color Palette */
 :root {
-    --color-primary: #246bfd;
-    --color-secondary: #fff;
-    --color-border: #1890ff;
-    --color-form-bg: #F5F8FF;
-    --color-input: #d9d9d9;
-    --color-placeholder: #bfbfbf;
-    --color-button-active: #4B86FD;
-    --color-button-hover:  #1F5BD7;
-    --logo-fontsize: 2rem;
-    --fontsize: 14px;
+  --color-primary: #246bfd;
+  --color-secondary: #fff;
+  --color-border: #1890ff;
+  --color-form-bg: #f5f8ff;
+  --color-input: #d9d9d9;
+  --color-placeholder: #bfbfbf;
+  --color-button-active: #4b86fd;
+  --color-button-hover: #1f5bd7;
+  --logo-fontsize: 2rem;
+  --fontsize: 14px;
+  --color-profile-bg: #f8f8f8;
+  --color-body: #1f1f1f;
+  --color-black: #000;
+  --color-danger: #e32f2f;
+  --color-nav-item: #262626;
+  --color-background: #d7e4f3;
 }
 
 /* CSS reset */

@@ -123,6 +123,7 @@
     height: 18px;
   }
   .cancel-container {
+<<<<<<< HEAD
     width: 500px;
     height: 302px;
     padding: 40px 60px;
@@ -130,6 +131,76 @@
 
   .cancel-check-image {
     margin: 0px 0 19px;
+=======
+    background-color: #fff;
+    width: 304px;
+    height: 297px;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: auto;
+    border-radius: 10px;
+    animation: scale 0.2s forwards ease-in;
+  }
+  
+  .cancel-image {
+    display: none;
+  }
+  
+  .cancel-check-image {
+    width: 60px;
+    height: 60px;
+  }
+  .cancel-header-text {
+    width: 270px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-top: 18px;
+  }
+  .cancel-header {
+    font-weight: 700;
+    width: 100%;
+    height: 17px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1f1f1f;
+  }
+  
+  .btn-continue {
+    background: #246bfd;
+    border: 1px solid #246bfd;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 3px;
+    width: 264px;
+    height: 40px;
+    margin-top: 12px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-continue-Yes {
+    background: #E32F2F;
+    border: 1px solid #E32F2F;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 3px;
+    width: 264px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .btn-continue-Yes:hover {
+    background: #e24343;
+    border: 1px solid #e24343;
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
   }
 
   .cancel-header-text {
@@ -142,8 +213,64 @@
     height: 44px;
     margin-top: 20px;
   }
+<<<<<<< HEAD
   .btn-continue {
     width: 344px;
     height: 44px;
   }
 }
+=======
+  .btn-continue-Yes:active {
+    background: #fd5a4b;
+    border: 1px solid #fd5a4b;
+    box-shadow: 0px 0px 0px 5px #4b86fd1a;
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(1, 1);
+    }
+    70% {
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .cancel-image {
+      width: 18px;
+      position: absolute;
+      right: 16px;
+      display: block;
+      top: 16px;
+      height: 18px;
+    }
+    .cancel-container {
+      width: 500px;
+      height: 302px;
+      padding: 40px 60px;
+    }
+  
+    .cancel-check-image {
+      margin: 0px 0 19px;
+    }
+  
+    .cancel-header-text {
+      width: 400px;
+      height: 17px;
+      margin-top: 3px;
+    }
+    .btn-continue-Yes{
+        width: 344px;
+        height: 44px;
+        margin-top: 20px;
+    }
+    .btn-continue {
+      width: 344px;
+      height: 44px;
+    }
+  }
+  
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9

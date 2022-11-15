@@ -119,7 +119,7 @@ export default {
     },
 
     toggleForgetPassword() {
-      this.forgotPassword = true;
+      this.forgotPassword = !this.forgotPassword;
     },
 
     showPassword() {

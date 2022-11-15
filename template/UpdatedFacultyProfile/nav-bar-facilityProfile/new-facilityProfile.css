@@ -6,6 +6,7 @@
 body {
   background-color: var(--color-background);
   background-color: #f5f8ff;
+<<<<<<< HEAD
 }
 
 .facility-content {
@@ -13,3 +14,12 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   /* ali */
 }
+=======
+}  
+
+.facility-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* ali */
+}
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9

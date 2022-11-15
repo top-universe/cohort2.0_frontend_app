@@ -2,6 +2,22 @@
 
 /* Color Palette */
 :root {
+<<<<<<< HEAD
+  --color-primary: #246bfd;
+  --color-secondary: #fff;
+  --color-profile-bg: #f8f8f8;
+  --color-body: #1f1f1f;
+  --color-black: #000;
+  --color-danger: #e32f2f;
+  --color-nav-item: #262626;
+  --color-border: #1890ff;
+  --color-input: #d9d9d9;
+  --color-placeholder: #bfbfbf;
+  --color-background: #d7e4f3;
+  --color-button-hover: #1f5bd7;
+  --color-button-active: #4b86fd;
+  --logo-fontsize: 2rem;
+=======
     --color-primary: #246bfd;
     --color-secondary: #fff;
     --color-profile-bg: #f8f8f8;
@@ -16,10 +32,22 @@
     --color-button-hover:  #1F5BD7;
     --color-button-active: #4B86FD;
     --logo-fontsize: 2rem;
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
 }
 
 /* Margin and Padding Reset */
 * {
+<<<<<<< HEAD
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-body);
+=======
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,9 +57,13 @@
 body {
     font-family: 'Lato', sans-serif;
     color: var(--color-body);
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
 }
 
 /* html {
     font-size: 62.5%;
 } */
+<<<<<<< HEAD
+=======
 
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9

@@ -229,7 +229,10 @@ button.save-changes {
 /* For Tablet (799 - 521) */
 
 /* @media (max-width: 799px) and (min-width: 521px) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
   .main-wrapper {
     /* flex-direction: column; */
 /* width: 90%;
@@ -259,7 +262,10 @@ button.save-changes {
 /* align-self: flex-start; */
 /* width: 40%;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
   .form-container {
     border-left: 2px solid var(--color-input);
     padding: 0 10% 0 5%;

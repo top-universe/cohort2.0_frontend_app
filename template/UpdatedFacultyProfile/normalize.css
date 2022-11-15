@@ -174,7 +174,12 @@ textarea {
  */
 
 button,
+<<<<<<< HEAD
+input {
+  /* 1 */
+=======
 input { /* 1 */
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
   overflow: visible;
 }
 
@@ -184,7 +189,12 @@ input { /* 1 */
  */
 
 button,
+<<<<<<< HEAD
+select {
+  /* 1 */
+=======
 select { /* 1 */
+>>>>>>> 68999b34bfd394c864ead48524f577ec7f192bc9
   text-transform: none;
 }
 

@@ -15,11 +15,19 @@ body {
   max-width: 293px;
   height: 173px;
   left: 64px;
+<<<<<<< HEAD
   top: 106px; 
   background: var(--color-secondary);
   box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
   border-radius: 10px;
 }  
+=======
+  top: 106px;
+  background: var(--color-secondary);
+  box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
+  border-radius: 10px;
+}
+>>>>>>> alawiye
 
 .settings-heading {
   width: 100%;
@@ -29,18 +37,30 @@ body {
   font-size: 24px;
   line-height: 29px;
   color: var(--color-body);
+<<<<<<< HEAD
 }  
+=======
+}
+>>>>>>> alawiye
 
 .settings-options {
   display: flex;
   flex-direction: column;
   width: 100%;
+<<<<<<< HEAD
 }  
+=======
+}
+>>>>>>> alawiye
 
 .settings-options a {
   text-decoration: none;
   padding: 15px 20px;
+<<<<<<< HEAD
 }  
+=======
+}
+>>>>>>> alawiye
 
 .settings-options .profile {
   background: var(--color-profile-bg);
@@ -49,7 +69,11 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+<<<<<<< HEAD
 }  
+=======
+}
+>>>>>>> alawiye
 
 .settings-options .deactivate {
   color: var(--color-danger);
@@ -57,7 +81,11 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+<<<<<<< HEAD
 }  
+=======
+}
+>>>>>>> alawiye
 /* Settings Section ends */
 
 /* Main Wrapper Section begins */
@@ -77,7 +105,10 @@ body {
   display: none;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> alawiye
 .flex-direction-column {
   flex-direction: column;
   width: 100%;
@@ -120,7 +151,10 @@ body {
   width: 50% !important;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> alawiye
 .form-group span {
   color: var(--color-danger);
 }
@@ -140,7 +174,10 @@ button.save-changes {
 
 /* Main Wrapper Section ends */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> alawiye
 /* Facility Images section begins*/
 
 .facility-container {
@@ -149,7 +186,11 @@ button.save-changes {
   height: 368px;
   border-radius: 10px;
   padding: 15px;
+<<<<<<< HEAD
 }    
+=======
+}
+>>>>>>> alawiye
 
 .box-group {
   display: flex;
@@ -158,7 +199,11 @@ button.save-changes {
 .facility-name {
   font-size: 20px;
   padding-bottom: 16px;
+<<<<<<< HEAD
   color:  #454545;
+=======
+  color: #454545;
+>>>>>>> alawiye
   opacity: 0.6;
   font-size: 14px;
   font-weight: 400;
@@ -169,41 +214,70 @@ button.save-changes {
   border-radius: 3px;
   margin: 1.5px;
 }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> alawiye
 .big-box {
   max-width: 260px;
   height: 150px;
   margin-bottom: 1.5px;
 }
+<<<<<<< HEAD
   
 .small-box {
   width: 85.50px;
   height: 64px;
 }
   
+=======
+
+.small-box {
+  width: 85.5px;
+  height: 64px;
+}
+
+>>>>>>> alawiye
 .plus-icon {
   margin-left: 30px;
   margin-top: 20px;
 }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> alawiye
 .facility-code {
   padding-top: 20px;
   padding-left: 10px;
 }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> alawiye
 .facility-label {
   padding-bottom: 10px;
   font-size: 14px;
   font-weight: 400;
 }
+<<<<<<< HEAD
   
 /* Facility Images section ends*/
 
+=======
+
+/* Facility Images section ends*/
+>>>>>>> alawiye
 
 /* For Tablet (799 - 521) */
 
 @media (max-width: 799px) and (min-width: 521px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> alawiye
   .main-wrapper {
     /* flex-direction: column; */
     width: 90%;
@@ -239,6 +313,7 @@ button.save-changes {
   }
 }
 
+<<<<<<< HEAD
 
 /* For Desktop >= 800px */
 @media screen and (min-width: 800px) {
@@ -276,4 +351,40 @@ button.save-changes {
         margin-bottom: 24px;
     }
 
+=======
+/* For Desktop >= 800px */
+@media screen and (min-width: 800px) {
+  .nav-small {
+    display: none;
+  }
+
+  .nav-bar {
+    display: flex;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .flex-content {
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+  }
+
+  .image-container {
+    align-self: flex-start;
+    width: 30%;
+  }
+
+  .form-container {
+    border-left: 2px solid var(--color-input);
+    padding: 0 25% 0 5%;
+  }
+
+  .form-input {
+    margin-bottom: 24px;
+  }
+>>>>>>> alawiye
 }

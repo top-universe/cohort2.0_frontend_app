@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "../pages/Home.vue";
 import Signup from "../pages/auth/signup.vue";
 import Signin from "../pages/auth/signin.vue";
+import personalProfile from "../pages/profile/personalProfile.vue";
 import FacultyProfile from "../pages/profile/facultyProfile.vue";
 
 const router = createRouter({
@@ -10,6 +11,11 @@ const router = createRouter({
     { path: "/", name: "home", component: Index },
     { path: "/signup", name: "Sign up", component: Signup },
     { path: "/signin", name: "Sign in", component: Signin },
+    {
+      path: "/personal-profile",
+      name: "Personal Profile",
+      component: personalProfile,
+    },
     {
       path: "/facultyprofile",
       name: "Faculty Profile",

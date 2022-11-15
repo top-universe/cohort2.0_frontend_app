@@ -5,7 +5,11 @@
       <div class="signout-sub-text">Are you sure you want to sign out?</div>
       <div class="signout-button-container">
         <button @click="close" class="btn-cancel">Cancel</button>
-        <router-link to="signin"><button @click="handleSignOut" class="btn-signout">Sign Out</button></router-link>
+        <router-link to="signin"
+          ><button @click="handleSignOut" class="btn-signout">
+            Sign Out
+          </button></router-link
+        >
       </div>
     </div>
   </div>

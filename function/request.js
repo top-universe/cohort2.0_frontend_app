@@ -1,11 +1,7 @@
 import axios from "axios";
 import { config } from "../config";
 
-<<<<<<< HEAD
-const BASE = config.APIBASEURL
-=======
 const BASE = config.APIBASEURL;
->>>>>>> alawiye
 
 /**
  * Request class [ basically for sending api requests using the axios library]

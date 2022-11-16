@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="container">
-            <div class="main">
-                <a href="#"><img src="../assets/Closecancel.svg" id="desktopCancel" alt=""></a>
-                <div class="logo">
-                    <h1>Medbookly</h1>
-                    <p class="desktopFgt">Forgot your password?</p>
-                </div>
-                <div class="form">
-                    <a href="#"><img src="../assets/Closecancel.svg" id="mobileCancel" alt=""></a>
-                    <p class="mobileFgt">Forgot your password?</p>
-                  
-                    <div class="padlock">
-                        <!-- padlock icon -->
-                        <img class="lockers" src="../assets/Vectorlock.svg" alt="">
-                        <p>Enter your email address to receive a mail to reset your password</p>
-                    </div>
-                    <form action="">
-                        <label for="Enter address" class="label">Enter Email address</label>
-                        <input class="enter-email" type="email" class="email" placeholder="e.g email@domain.com">
-                        <button class="reset-btn">Reset Password</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
+      <div class="container">
+        <div class="main">
+          <a href="#"
+            ><img src="../assets/Closecancel.svg" id="desktopCancel" alt=""
+          /></a>
+          <div class="logo">
+            <h1>Medbookly</h1>
+            <p class="desktopFgt">Forgot your password?</p>
+          </div>
+          <div class="forget-input-container">
+            <a href="#"
+              ><img src="../assets/Closecancel.svg" id="mobileCancel" alt=""
+            /></a>
+            <p class="mobileFgt">Forgot your password?</p>
 
+            <div class="padlock">
+              <!-- padlock icon -->
+              <img class="lockers" src="../assets/Vectorlock.svg" alt="" />
+              <p>
+                Enter your email address to receive a mail to reset your
+                password
+              </p>
+            </div>
+            <form class="the-forget-input" action="">
+              <label for="Enter address" class="label"
+                >Enter Email address</label
+              >
+              <input
+                class="enter-email"
+                type="email"
+                class="email"
+                placeholder="e.g email@domain.com"
+              />
+              <button class="reset-btn">Reset Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

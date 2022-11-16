@@ -9,7 +9,168 @@
           alt="check"
         />
         <div class="created-header-text">Forgot Password</div>
-        <button class="primary-button">Send Confirmation Email</button>
+        <button
+          @click="
+            () => {
+              resetInput = true;
+              forgotPassword = false;
+            }
+          "
+          class="primary-button"
+        >
+          Send Confirmation Email
+        </button>
+      </div>
+    </modal>
+
+    <!-- enter your email for forgot password -->
+    <modal v-show="resetInput">
+      <div class="modal-popup">
+        <div style="margin-top: 50px" class="created-header-text">
+          Forgot Password?
+        </div>
+
+        <div class="forget-input-container">
+          <a href="#"
+            ><img src="../assets/Closecancel.svg" id="mobileCancel" alt=""
+          /></a>
+          <p class="mobileFgt">Forgot your password?</p>
+
+          <div class="padlock">
+            <!-- padlock icon -->
+            <img class="lockers" src="@/assets/icons/Vectorlock.svg" alt="" />
+            <p>
+              Enter your email address to receive a mail to reset your password
+            </p>
+          </div>
+
+          <div style="all: none" class="the-forget-input">
+            <label for="Enter address" class="label">Enter Email address</label>
+            <input
+              class="enter-email email"
+              type="email"
+              placeholder="e.g email@domain.com"
+            />
+            <button
+              @click="
+                () => {
+                  resetInput = false;
+                  resetLink = true;
+                }
+              "
+              style="margin: 0"
+              class="primary-button"
+            >
+              Reset Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </modal>
+
+    <!-- modal for reset  password link sent -->
+    <modal v-show="resetLink">
+      <div class="modal-popup">
+        <div style="margin-top: 50px" class="created-header-text">
+          Reset Account Passowrd
+        </div>
+
+        <div class="forget-input-container">
+          <h3 style="margin-bottom: 20px">Check email for reset link</h3>
+
+          <div class="padlock">
+            <p class="text-center line-height">
+              A mail has been sent to the administravtive email address you
+              submitted. Check your email inbox and click the reset link
+              provided.
+            </p>
+          </div>
+
+          <div class="the-forget-input">
+            <span style="color: red; font-size: 14px; margin-top: 40px">
+              <i>Reset link will become invalid in 60 seconds</i>
+            </span>
+
+            <button
+              @click="
+                () => {
+                  resetPassword = true;
+                  resetLink = false;
+                }
+              "
+              class="primary-button white-btn"
+              style="margin-top: 20px"
+            >
+              Didn't receive an email?
+            </button>
+          </div>
+        </div>
+      </div>
+    </modal>
+
+    <!-- modal for changing/inputing new password-->
+    <modal v-show="resetPassword">
+      <div class="modal-popup">
+        <div style="margin-top: 50px" class="created-header-text">
+          Reset Account Password
+        </div>
+
+        <div class="forget-input-container">
+          <div class="padlock">
+            <p class="text-center line-height">
+              Strong password include members, letters, and punctuation marks.
+            </p>
+          </div>
+
+          <div style="all: none" class="the-forget-input">
+            <label for="Enter address" class="label"><b>New Password</b></label>
+            <input class="enter-email email" type="text" />
+
+            <label for="Enter address" class="label">
+              <b>Confirm Password</b>
+            </label>
+            <input class="enter-email email" type="text" />
+
+            <button
+              @click="
+                () => {
+                  resetPassword = false;
+                  resetSuccessful = true;
+                }
+              "
+              style="margin: 0"
+              class="primary-button"
+            >
+              Reset Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </modal>
+
+    <!-- modal for reset password succesful -->
+    <modal v-show="resetSuccessful">
+      <div class="modal-popup">
+        <img
+          class="created-check-image"
+          src="@/assets/icons/CheckCircle.svg"
+          alt="check"
+        />
+        <div class="created-header-text">Password Changed</div>
+        <div class="forget-input-container">
+          <div class="padlock">
+            <p class="text-center line-height">
+              You password has been changed succesfully. <br />
+              Use you new password to log in.
+            </p>
+          </div>
+
+          <router-link to="signin">
+            <button style="margin: 20px 0 0 0" class="primary-button">
+              Login
+            </button>
+          </router-link>
+        </div>
       </div>
     </modal>
 
@@ -99,6 +260,10 @@ import modal from "@/components/modal.vue";
 export default {
   data() {
     return {
+      resetInput: false,
+      resetLink: false,
+      resetPassword: false,
+      resetSuccessful: false,
       forgotPassword: false,
       classCloseIcon: "icon-show",
       classOpenIcon: "icon-hide",

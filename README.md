@@ -137,7 +137,7 @@ npm run build
 
 **Description:** The admin should be able to retrieve their password in the event that they forget it. 
 
-** Acceptance Criteria** 
+**Acceptance Criteria** 
 1. Users should be able to reset their password on the sign-in page with either an OTP or one-time email link.   
 
 #### Feature 4: Profile Page 

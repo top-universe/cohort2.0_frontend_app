@@ -1,0 +1,169 @@
+@import url(../main.css);
+@import url(../button.css);
+@import url(../nav-bar.css);
+@import url(../input.css);
+
+
+body {
+  background-color: var(--color-secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(185, 179, 174);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(136, 136, 136);
+}
+
+/* Mobile view */
+.activity-overflow {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+
+.current-activity-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 29px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.activity-history {
+  border-bottom: 3px solid;
+  padding-bottom: 2px;
+}
+
+.appnt-type {
+  /* border: 1px solid red; */
+  padding: 2px 0;
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
+.appnt-type ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.appnt-type li {
+  font-size: 18px;
+  text-indent: -7px;
+}
+
+.appnt-type li span {
+  color: black;
+  font-size: 8px;
+}
+
+.records-card {
+  display: flex;
+  background-color: var(--color-secondary);
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.list-cancel {
+  color: #F8CDCD;
+}
+
+.bg-cancel {
+  background: #F8CDCD;
+}
+
+.list-reschedule {
+  color: #F5F5F5;
+}
+
+.bg-reschedule {
+  background: #F5F5F5;
+}
+
+.list-approve {
+  color: #D9F7D6;
+}
+
+.bg-approve {
+  background: #D9F7D6;
+}
+
+.booking-details {
+  width: 40%;
+  min-width: 50px;
+}
+
+.view-details {
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.record-delete {
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: var(--color-danger);
+  margin-left: 18px;
+}
+
+
+  /* Desktop view */
+@media screen and (min-width: 767px) {
+  .activity-container {
+    padding: 43px 90px 29px;
+  }
+  
+  .current-activity-heading {
+    padding-left: 0;
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+
+  .current-booking {
+    padding-right: 100px;
+  }
+
+.appnt-type ul {
+  justify-content: flex-start;
+  padding-right: 10px;
+}
+
+.appnt-type li {
+  padding-right: 50px;
+}
+
+.appnt-type li span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.record-delete {
+  margin-left: 25px;
+}
+
+.records-card {
+  display: flex;
+  padding: 29px 26px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+}

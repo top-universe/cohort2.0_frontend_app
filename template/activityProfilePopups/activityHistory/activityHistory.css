@@ -1,7 +1,7 @@
-@import url(../main.css);
-@import url(../button.css);
-/* @import url(../nav-bar.css); */
-/* @import url(../input.css); */
+@import url(../../../main.css);
+@import url(../../button/button.css);
+@import url(../../nav-bar/nav-bar.css);
+@import url(../../input/input.css);
 
 .main-container {
     background: black;
@@ -13,7 +13,7 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
-.confirm-container{
+.activity-container{
     position: relative;
     width: 312px;
     background: var(--color-secondary);
@@ -33,14 +33,14 @@
     top: 16px;
 }
 
-.confirm-content {
+.activity-content {
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.confirm-description { 
+.activity-description { 
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -54,16 +54,16 @@
     margin: 24px 0 0;
 }
 
-/* For larger screens */
+/* For tablet and desktop devices */
 @media (min-width: 1024px) {
-    .confirm-container {
+    .activity-container {
         border-radius: 10px;
         width: 500px;
         height: 322px;
         padding: 40px 50px;
     }
 
-    .confirm-description { 
+    .activity-description { 
         margin-top: 24px;
         line-height: 17px;
     }

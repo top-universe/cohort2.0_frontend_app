@@ -1,0 +1,104 @@
+@import url(../main.css);
+@import url(../button.css);
+@import url(../nav-bar.css);
+@import url(../input.css);
+
+
+body {
+  background-color: var(--color-secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(185, 179, 174);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(136, 136, 136);
+}
+
+/* Mobile view */
+.activity-overflow {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.current-activity-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 29px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.current-booking {
+  border-bottom: 3px solid;
+  padding-bottom: 2px;
+}
+
+.records-card {
+  display: flex;
+  /* background-color: var(--color-secondary); */
+  background-color: #f0f0f0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.booking-details {
+  width: 75%;
+  min-width: 100px;
+}
+
+.view-details {
+  flex-wrap: nowrap;
+  height: 32px;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+  /* Desktop view */
+@media screen and (min-width: 767px) {
+  .activity-container {
+    padding: 43px 90px 29px;
+  }
+  
+  .current-activity-heading {
+    padding-left: 0;
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+  
+  .current-booking {
+    border-bottom: 3px solid;
+    padding-bottom: 2px;
+  }
+  
+  .activity-history {
+    padding-left: 100px;
+  }
+
+  .records-card {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 29px 26px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+}

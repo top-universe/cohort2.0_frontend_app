@@ -6,9 +6,9 @@
       <div class="signout-button-container">
         <button @click="close" class="btn-cancel">Cancel</button>
         <router-link to="signin"
-          ><button @click="handleSignOut" class="btn-signout">
+          > <button @click="handleSignOut" class="btn-signout">
             Sign Out
-          </button></router-link
+          </button> </router-link
         >
       </div>
     </div>
@@ -28,7 +28,7 @@ export default {
       alert("signed out");
     },
     close() {
-      this.signOutDisplay = false;
+      this.signOutDisplay = !this.signOutDisplay;
     },
   },
 };
@@ -55,7 +55,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 900;
+  z-index: 999;
 }
 .signout-container {
   background-color: #fff;

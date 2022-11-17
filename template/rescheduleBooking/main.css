@@ -1,0 +1,37 @@
+@import url(../../assets/css/normalize.css);
+
+/* Color Palette */
+:root {
+    --color-primary: #246bfd;
+    --color-secondary: #fff;
+    --color-profile-bg: #f8f8f8;
+    --color-body: #1f1f1f;
+    --color-black: #000;
+    --color-danger:  #E32F2F;
+    --color-nav-item: #262626;
+    --color-border: #1890ff;
+    --color-input: #d9d9d9;
+    --color-placeholder: #bfbfbf;
+    --color-background: #d7e4f3;
+    --color-button-hover:  #1F5BD7;
+    --color-button-active: #4B86FD;
+    --logo-fontsize: 2rem;
+}
+
+/* Margin and Padding Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-body);
+}
+
+/* html {
+    font-size: 62.5%;
+} */
+

@@ -12,7 +12,7 @@ const router = createRouter({
     { path: "/signup", name: "Sign up", component: Signup },
     { path: "/signin", name: "Sign in", component: Signin },
     {
-      path: "/personal-profile",
+      path: "/personalprofile",
       name: "Personal Profile",
       component: personalProfile,
     },

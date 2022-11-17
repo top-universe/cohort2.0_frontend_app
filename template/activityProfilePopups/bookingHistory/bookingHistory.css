@@ -1,5 +1,7 @@
-@import url(../../../src/assets/css/app.css);
-@import url(../../../src/assets/css/buttons.css);
+@import url(../main.css);
+@import url(../button.css);
+/* @import url(../nav-bar.css); */
+/* @import url(../input.css); */
 
 .main-container {
     display: flex;

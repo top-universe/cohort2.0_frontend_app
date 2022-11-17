@@ -6,9 +6,9 @@
       <div class="signout-button-container">
         <button @click="close" class="btn-cancel">Cancel</button>
         <router-link to="signin"
-          ><button @click="handleSignOut" class="btn-signout">
+          > <button @click="handleSignOut" class="btn-signout">
             Sign Out
-          </button></router-link
+          </button> </router-link
         >
       </div>
     </div>

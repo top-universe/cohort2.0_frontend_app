@@ -2,6 +2,9 @@
 @import url("./input.css");
 @import url("./form.css");
 @import url("./button.css");
+@import url("./nav-bar.css");
+@import url("./reset-password-email.css");
+@import url("./main.css");
 
 * {
   margin: 0px;

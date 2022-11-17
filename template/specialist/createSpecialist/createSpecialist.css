@@ -1,0 +1,281 @@
+@import url(../../../src/assets/css/button.css);
+@import url(../../../src/assets/css/nav-bar.css);
+
+
+*, *::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  background-color: var(--color-background);
+  background-color: #f5f8ff;
+  font-family: 'Lato', sans-serif;
+  color: #1f1f1f;
+}
+/* For Mobile Devices <= 520px */
+
+/* Nav Bar */
+.nav-bar {
+  display: none;
+}
+
+.nav-small {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.nav-small img {
+  width: 25px;
+  height: 25px;
+  opacity: 0.8;
+}
+
+.main-wrapper {
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(186, 197, 255, 0.25);
+  border-radius: 10px;
+  margin: 0px 20px 40px;
+  padding-bottom: 30px;
+}
+
+.main-wrapper .title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.main-wrapper .main-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  padding: 32px 0 0 0;
+}
+.form-container {
+    margin: 0 auto;
+    width: 82%;
+}
+
+/* Form Inputs and labels */
+.form-group { 
+  width: 100%;
+}
+
+.form-label, .form-label-inline { 
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: black;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input { /*input properties*/
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 16px;
+  margin: 8px 0 12px;
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+}
+
+.form-group .form-textarea { /*textarea properties*/
+  height: 70px;
+  width: 100%;
+}
+.form-group-inline { 
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-group span {
+  color: var(--color-danger);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Image Container */
+.roundbg {
+  border-radius: 50%;
+  width: 118px;
+  height: 118px;
+  background-color: #d9d9d9;
+}
+
+.plus {
+  margin-left: 34px;
+  margin-top: 34px;
+}
+
+.image-container .text {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #153d90;
+  margin: 20px 0 34px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Button */
+button.save-changes {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 0px;
+  height: 40px;
+}
+
+/* For Tablet (799 - 521) */
+@media (max-width: 799px) and (min-width: 521px) {
+  .nav-small {
+    display: flex;
+    padding: 20px 42px;
+  }
+  .nav-bar {
+    display: none;
+  }
+
+  .main-wrapper {
+    width: 90%;
+  }
+  .image-container {
+    align-self: flex-start;
+    width: 30%;
+}
+
+  .main-wrapper .main-title {
+    display: block;
+    padding: 25px 0 0 47px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .flex-direction-column {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .form-container {
+    border-left: 2px solid #d9d9d9;
+    padding: 0 10% 0 5%;
+  }
+
+  .flex-container-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-input {
+    margin-bottom: 24px;
+  }
+}
+
+
+/* For Desktop >= 800px */
+@media screen and (min-width: 800px) {
+
+    .nav-small {
+        display: none;
+    }
+
+    .nav-bar {
+        display: flex;
+    }
+
+    .main-wrapper {
+        width: 80%;
+        margin-top: 24px;
+    }
+    .main-wrapper .title {
+      text-align: start;
+      padding: 35px 0 0 90px;
+    }
+
+    .main-wrapper .main-title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .flex-direction-column {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .image-container {
+        align-self: flex-start;
+        width: 30%;
+    }
+
+    .form-container {
+        border-left: 2px solid #d9d9d9;
+        padding: 0 15% 0 5%;
+    }
+
+    .flex-container-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-input {
+        margin-bottom: 24px;
+    }
+    /* form and inputs */
+    .form-label, .form-label-inline {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+  }
+  .form-input {
+      font-size: 14px;
+      height: 44px;
+      line-height: 20px;
+      margin: 8px 0 36px;
+  }
+  .form-group-inline {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+  }
+  .form-group .form-textarea {
+    height: 100px;
+    width: 100%;
+  }
+  button.save-changes {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    height: 44px;
+  }
+  .image-container .text {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal-profile</title>
+    <link rel="stylesheet" href="./landingPage.css" />
+  </head>
+  <body>
+    <!-- nav-bar section -->
+    <header class="header">
+      <!-- mobile nav -->
+      <nav class="nav-small">
+        <a href="" class="nav-title">MedBookly</a>
+        <a href=""><img src="./icons/bars-solid.svg" alt="hamburger icon" /></a>
+      </nav>
+      <!-- desktop nav -->
+      <nav class="nav-bar">
+        <a href="#">
+          <h1 class="logo-text">MedBookly</h1>
+        </a>
+        <ul class="nav-list">
+          <li class="nav-item active"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About Us</a></li>
+          <li class="nav-item"><a href="#services">Services</a></li>
+        </ul>
+        
+        <div class="nav-buttons">
+          <button class="button primary-button nav-button">Sign In</button>
+          <button class="button primary-button nav-button">Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main wrapper section -->
+    <main class="landing-page">
+      <div class="hero" id="home">
+        <div class="hero-text">
+          <h1 class="title">Find a doctor & book online</h1>
+          <p class="subtitle">Easily book a doctor anywhere in the world with medbookly</p>
+          <button class="button primary-button search-mobile-button">Search</button>
+          <div class="serach-desktop">
+            <input type="text" name="search" id="" class="form-input" placeholder="Search by doctor or hospital">
+            <img src="./icons/search-icon.svg" alt="" class="search-icon">
+            <button class="button primary-button search-desktop-button">Search</button>
+          </div>
+        </div>
+        <div>
+          <picture class="bg-circle1">
+            <source media="(max-width:799px)" srcset="./icons/hero-image-mobile.png">
+            <source media="(min-width:800px)" srcset="./icons/hero-image-desktop.png">
+            <img src="./icons/hero-image-mobile.png" alt="Hero Image">
+          </picture>
+          <!-- <div class="hero-circle">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+          </div> -->
+          <picture class="bg-circle2">
+            <source media="(max-width:799px)" srcset="./icons/bg-mobile.png">
+            <source media="(min-width:800px)" srcset="./icons/bg-desktop.png">
+            <img src="./icons/bg-mobile.png" alt="Hero Image">
+          </picture>
+        </div>
+      </div>
+      <div class="appointment">
+        <div class="appointment-heading">
+          <h2 class="appointment-title">Easy steps to book an appointment</h2>
+          <p class="appointment-subtitle">The best online doctor appointment & consultation booking app for your health & medical needs</p>
+          <button class="button primary-button app-button">Book your Appointment Now</button>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./icons/location-icon.png" alt="">
+            <h3 class="card-title">Choose Your Location</h3>
+            <p class="card-subtitle">Before you book an appointment, first of all select your location.</p>
+          </div>
+          <div class="card">
+            <img src="./icons/hospital-icon.png" alt="">
+            <h3 class="card-title">Select a Hospital</h3>
+            <p class="card-subtitle">Pick from the list of nearby hospitals to schedule an appointment.</p>
+          </div>
+          <div class="card">
+            <img src="./icons/doctor-icon.png" alt="">
+            <h3 class="card-title">Choose a Doctor</h3>
+            <p class="card-subtitle">Select the specialist doctor you would like to see.</p>
+          </div>
+          <div class="card">
+            <img src="./icons/calendar-icon.png" alt="">
+            <h3 class="card-title">Schedule Appointment</h3>
+            <p class="card-subtitle">Select date and time to complete the process of booking an appointment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about" id="about">
+        <div class="about-img">
+          <picture>
+            <source media="(max-width:799px)" srcset="./icons/about-image-mobile.png">
+            <source media="(min-width:800px)" srcset="./icons/about-image-desktop.png">
+            <img src="./icons/about-image-mobile.png" alt="Hero Image">
+          </picture>
+        </div>
+        <div class="about-content">
+          <h3 class="about-title">About Us</h3>
+          <p class="about-subtitle">Medbookly is the leading health appointment booking app this century. It was developed by TopUniverse students of the Cohort 2.0 in 2022. <br> <br> Loaded with over 2,000 Hospitals with over 50,000 Doctors, Pediatricians and other health practitioners, Medbookly brings you closer to the very best of medical services. </p>
+        </div>
+      </div>
+      <div class="services" id="services">
+        <div class="services-img">
+          <picture>
+            <source media="(max-width:799px)" srcset="./icons/services-image-mobile.png">
+            <source media="(min-width:800px)" srcset="./icons/services-image-desktop.png">
+            <img src="./icons/services-image-mobile.png" alt="Hero Image">
+          </picture>
+          <div class="services-bg"></div>
+        </div>
+        <div class="services-content">
+          <h3 class="services-title">Our Services</h3>
+          <p class="services-subtitle">Book and schedule health appointments with health practitioners with ease from your home. Medbookly features a wide variety of health facilities and health practicioners close to you and far away. <br> <br>  Avoid cluster of patients at your healthcare facility by  scheduling appointments without receiving health complaints physically. </p>
+        </div>
+      </div>
+      <div class="download">
+        <div class="download-content">
+          <div class="download-text">
+            <h3 class="download-title">Download Our App</h3>
+            <p class="download-subtitle">Book appointments anywhere around the world to see top notch doctors.</p>
+          </div>
+          <div class="download-apps flex flex-desktop">
+            <div class="download-apple flex">
+              <img src="./icons/apple.png" alt="">
+              <p class="download-apple-text">Download on the App Store
+              </p>
+            </div>
+            <div class="download-play flex">
+              <img src="./icons/google-play-icon.png" alt="">
+              <p class="download-play-text">Get it on <br> Google Play
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="download-example">
+          <picture>
+            <source media="(max-width:799px)" srcset="./icons/download-app3.png">
+            <source media="(min-width:800px)" srcset="./icons/download-desktop.png">
+            <img src="./icons/./icons/download-app3.png" alt="Hero Image">
+          </picture>
+        </div>
+      </div>
+    </main>
+    <footer class="med-footer">
+      <div class="footer-title">
+        <h3>MedBookly</h3>
+      </div>
+      <div class="footer-content">
+        <p class="copy">© 2022 Medbookly</p>
+        <p class="terms">Terms of Use</p>
+        <p class="policy">Privacy Policy</p>
+      </div>
+    </footer>
+  </body>
+</html>
